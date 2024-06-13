@@ -13,3 +13,39 @@ span {
 .content {
   width: 400px;
 }
+
+::ng-deep.p-tabview-nav{
+background-color: transparent !important;;
+}
+::ng-deep.p-element .p-ripple .p-tabview-nav-link{
+background-color: #e3edf7;
+}
+::ng-deep.p-tabview .p-tabview-nav li .p-tabview-nav-link	{
+  // margin-right: 10px;
+background-color: #e3edf7;
+}
+::ng-deep .p-tabview-nav{
+  justify-content: space-evenly;
+}
+::ng-deep span.ng-star-inserted{
+  font-size: 1.2rem;
+}
+// ::ng-deep.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+//   background-color: red   ;
+// }
+::ng-deep.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+  background-color:transparent
+}
+::ng-deep.p-tabview-panels{
+  background-color: #e3edf7;
+
+}
+
+.title{
+  margin: 5px;
+  font-weight: 500;
+    font-size: 1.3rem;
+}
+  p:hover{
+  color: black;
+}

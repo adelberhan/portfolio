@@ -1,21 +1,15 @@
 <section class="about" id="about">
   <div class="about-img">
     <img
-      src="http://drive.google.com/uc?export=view&id=1KDqi3PFSGs6KYhS2iW6n4a1WGxHNo0sR
+      src="../../assets/img/hero.png
 "
       alt=""
       class="aboutHero"
     />
 
     <div class="showcase-ring">
-      <img
-        src="http://drive.google.com/uc?export=view&id=1IdwqjQUIESgqtrvdiTCgpBsm7AQd_5AA"
-        class="ring"
-      />
-      <img
-        src="http://drive.google.com/uc?export=view&id=1xKORWvHbhInOnHpvlb-odIzO26J1AThe"
-        class="circle"
-      />
+      <img src="../../assets/shapes/ring.png" class="ring" />
+      <img src="../../assets/shapes/ring.png" class="circle" />
     </div>
   </div>
   <div class="about-content">
@@ -26,12 +20,12 @@
       Science to apply my B.Sc. degree where I canfurther expand personal and
       professional experiences.
     </p>
-    <div class="about-btn">
+    <!-- <div class="about-btn">
       <button class="active">Main Skills</button>
       <button>Education</button>
       <button>Contact</button>
-    </div>
-    <div class="content-btn">
+    </div> -->
+    <!-- <div class="content-btn">
       <div class="content">
         <div class="text-box">
           <p>Front-end</p>
@@ -107,14 +101,154 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <p-tabView styleClass="tabview-custom ">
+      <p-tabPanel>
+        <ng-template pTemplate="header">
+          <i
+            class="pi pi-sparkles"
+            style="
+              background-image: linear-gradient(
+                to right,
+                #3ab5b0 0%,
+                #3d99be 31%,
+                #56317a 100%
+              );
+              -webkit-background-clip: text;
+              color: transparent !important;
+              display: inline;
+              margin-right: 5px;
+            "
+          ></i>
+          <span>skills</span>
+        </ng-template>
+        <p class="title">Front-end</p>
+        <span> -Skilled in HTML, CSS, and responsive web design.</span>
+        <span>
+          - Capable of integrating RESTful APIs and handling data in
+          Angular.</span
+        >
+        <span>
+          - Experienced in project setup, code generation, and development with
+          Angular CLI.</span
+        >
+        <p class="title">Back-end</p>
+        <span>
+          - Node.js: Creating high-performance server-side applications.</span
+        >
+        <span>- Express: Efficiently handling HTTP requests and routing.</span>
+        <span
+          >- MongoDB: Flexible NoSQL database for adaptable data
+          structures.</span
+        >
+        <span>
+          - JWT (JSON Web Tokens): Secure user authentication and session
+        </span>
+      </p-tabPanel>
+      <p-tabPanel header="Header II">
+        <ng-template pTemplate="header">
+          <i
+            class="pi pi-graduation-cap"
+            style="
+            background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+              -webkit-background-clip: text;
+              color: transparent !important;
+              display: inline;
+              margin-right: 5px;
+            "
+          ></i>
+          <span>Education</span>
+        </ng-template>
+        <span
+          >B.Sc. Computer Science | Misr University of Science and Technology
+          |<br />
+          GPA 3.45</span
+        >
+      </p-tabPanel>
+
+      <p-tabPanel header="Header II">
+        <ng-template pTemplate="header">
+          <i
+            class="pi pi-briefcase"
+            style="
+              background-image: linear-gradient(
+                to right,
+                #3ab5b0 0%,
+                #3d99be 31%,
+                #56317a 100%
+              );
+              -webkit-background-clip: text;
+              color: transparent !important;
+              display: inline;
+              margin-right: 5px;
+            "
+          ></i>
+          <span>Work</span>
+        </ng-template>
+        <div class="line"></div>
+        <p style="display: inline; margin-right: 30px">Inovasys | Internship</p>
+        <p style="display: inline">Feb 2024 - Mar 2024 Cairo, Egypt</p>
+
+        <span
+          >Power platform<br />
+          Utilized the Microsoft Power Platform extensively, including Power
+          Automate, Power Apps, Power BI, and Power Virtual Agents, to develop
+          innovative solutions.</span
+        >
+      </p-tabPanel>
+
+      <p-tabPanel header="Header III">
+        <ng-template pTemplate="header">
+          <i
+            class="pi pi-address-book"
+            style="
+              background-image: linear-gradient(
+                to right,
+                #3ab5b0 0%,
+                #3d99be 31%,
+                #56317a 100%
+              );
+              -webkit-background-clip: text;
+              color: transparent !important;
+              display: inline;
+              margin-right: 5px;
+            "
+          ></i>
+          <span>Contact</span>
+        </ng-template>
+        <div class="text-box">
+          <p>E-mail</p>
+          <span>adel.berhan@gmail.com</span>
+        </div>
+        <div class="text-box">
+          <p>Phone</p>
+          <span>01014308323</span>
+        </div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <a
+              href="https://www.linkedin.com/in/adel-ahmed-2622a6211/"
+              target="_blank"
+            >
+              <i class="devicon-linkedin-plain"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/adelberhan" target="_blank">
+              <i class="devicon-github-original colored"></i>
+            </a>
+          </li>
+        </ul>
+      </p-tabPanel>
+    </p-tabView>
     <div class="cvContent">
       <a
-      [href]="'https://drive.google.com/file/d/'+link"
-      target="_blank"
-      class="btn d-CV"
-      >Download CV <i class="bx bx-download"></i
-    ></a>
+        [href]="'https://drive.google.com/file/d/' + link"
+        target="_blank"
+        class="btn d-CV"
+        >Download CV <i class="bx bx-download"></i
+      ></a>
     </div>
   </div>
 </section>

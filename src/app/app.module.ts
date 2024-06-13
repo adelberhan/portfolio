@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgxTypedJsModule } from 'ngx-typed-js';
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ContactComponent,
     PortfolioComponent,
     HeaderComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
+    NgxTypedJsModule,
+    TabViewModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

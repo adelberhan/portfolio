@@ -2,7 +2,7 @@
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss';
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss';
 @import '../node_modules/animate.css/animate.min.css';
-
+@import "../node_modules/primeicons/primeicons.css";
 * {
   padding: 0;
   margin: 0;
@@ -13,19 +13,12 @@
 
 :root {
   --bg-color: #e3edf7;
-  --gradient-white-bg: linear-gradient(
-    0deg,
-    #fff 0%,
-    #edf4fa 51%,
-    #e5eef7 100%
-  );
-  --gradient-color-bg: linear-gradient(
-    180deg,
-    rgba(247, 1, 120, 1) 0%,
-    rgba(160, 8, 156, 1) 51%,
-    rgba(99, 13, 178, 1) 100%
-  );
-  --main-color: #e6006d;
+  --gradient-white-bg: linear-gradient(0deg,
+      #fff 0%,
+      #edf4fa 51%,
+      #e5eef7 100%);
+  --gradient-color-bg:linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);;
+  --main-color: #3d99be;
   --font-color: #90979f;
   --hover-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -145,7 +138,7 @@ ul.navlist {
 
 /* ==================== home section css code ============================ */
 section {
-  padding: 90px 8%;
+  padding: 45px 8%;
 }
 
 .home {
@@ -388,7 +381,7 @@ section {
 }
 
 .about-content {
-  padding: 3rem 0;
+  padding: 0;
 }
 
 .about-content h2 {
@@ -439,7 +432,7 @@ section {
   margin: 0.8rem 0;
 }
 
-.content-btn > .content:not(:first-child) {
+.content-btn>.content:not(:first-child) {
   display: none;
 }
 
@@ -987,6 +980,7 @@ footer {
 /*======================= @keyframes ============================ */
 
 @keyframes moveText {
+
   0%,
   10%,
   100% {
@@ -1000,6 +994,7 @@ footer {
 }
 
 @keyframes moveCursorText {
+
   0%,
   10%,
   100% {
@@ -1023,6 +1018,7 @@ footer {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1032,6 +1028,7 @@ footer {
   0% {
     transform: rotate(360deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -1047,9 +1044,11 @@ footer {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-22px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -1064,39 +1063,48 @@ footer {
 }
 
 @media (max-width: 991px) {
+
   header,
   section,
   footer {
     padding-left: 3%;
     padding-right: 3%;
   }
+
   .home,
   .portfolio-box {
     flex-direction: column-reverse;
   }
+
   .about,
   .contactSkills {
     flex-direction: column;
   }
+
   .about .about-img .aboutHero {
     width: 100%;
   }
+
   .proposal img {
     width: 52vw;
   }
+
   .portfolio-img img {
     width: 100%;
     height: 100%;
   }
+
   .portfolio-gallery {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+
   .img-hero {
     margin-top: 3rem;
   }
 }
 
 @media (max-width: 768px) {
+
   // .proposal {
   //   display: none;
   // }
@@ -1105,6 +1113,7 @@ footer {
   .menu-icon::before {
     display: block;
   }
+
   ul.navlist {
     position: absolute;
     top: -1000px;
@@ -1116,13 +1125,16 @@ footer {
     left: 0;
     border-top: 2px solid rgba(248, 202, 202, 0.7);
   }
+
   ul.navlist a {
     font-size: 1.5rem;
     margin: 1rem 0;
   }
+
   .navlist.active {
     top: 100%;
   }
+
   .overlay {
     width: 100vw;
     height: 100vh;
@@ -1135,16 +1147,20 @@ footer {
     transform: 0.3s;
     pointer-events: none;
   }
+
   body.open .overlay {
     opacity: 1;
     pointer-events: auto;
   }
+
   .btn {
     padding: 10px;
   }
+
   .home {
     grid-gap: 0;
   }
+
   .fillter-buttons button {
     padding: 10px;
     font-size: 0.8rem;
@@ -1155,38 +1171,49 @@ footer {
   html {
     font-size: 80%;
   }
-  .text-animate h2{
+
+  .text-animate h2 {
     font-size: 22px;
   }
+
   section {
     padding: 50px 3%;
   }
+
   .contact-info form .input-box {
     display: block;
   }
+
   .input-box input {
     width: 100%;
   }
+
   .rotate-text {
     display: none;
   }
+
   .img-hero img {
     width: 100%;
   }
+
   .text-animate {
     width: 23.8rem;
   }
+
   .btn-box {
     width: 266px;
     margin-bottom: 3rem;
   }
+
   .about-btn button {
     padding: 10px 15px;
   }
+
   .fillter-buttons {
     display: grid;
     grid-gap: 1rem;
   }
+
   .fillter-buttons button {
     width: 100%;
     padding: 13px;

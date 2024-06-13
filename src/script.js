@@ -16,12 +16,12 @@ function hamburgerMenu() {
   });
 
   // rotate text js code
-  let text = document.querySelector(".text p");
+  // let text = document.querySelector(".text p");
 
-  text.innerHTML = text.innerHTML
-    .split("")
-    .map((char, i) => `<b style="transform:rotate(${i * 6.3}deg")>${char}</b>`)
-    .join("");
+  // text.innerHTML = text.innerHTML
+  //   .split("")
+  //   .map((char, i) => `<b style="transform:rotate(${i * 6.3}deg")>${char}</b>`)
+  //   .join("");
 
   // switch between about buttons
 
@@ -143,7 +143,7 @@ function hamburgerMenu() {
       document.documentElement.scrollTop = 0;
     });
 
-    scrollProgress.style.background = `conic-gradient(#fff ${scrollValue}%,#e6006d ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#fff ${scrollValue}%,#3d99be ${scrollValue}%)`;
   };
 
   window.onscroll = calcScrollValue;
@@ -197,3 +197,28 @@ function hamburgerMenu() {
     });
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const filterButtons = document.querySelectorAll(".filter-buttons .button");
+  const portfolioBoxes = document.querySelectorAll(".portfolio-box");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", function() {
+      const filterValue = this.getAttribute("data-filter");
+
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      portfolioBoxes.forEach(box => {
+        if (filterValue === "all") {
+          box.classList.add("mix");
+        } else if (box.classList.contains(filterValue)) {
+          box.classList.add("mix");
+        } else {
+          box.classList.remove("mix");
+        }
+      });
+    });
+  });
+});

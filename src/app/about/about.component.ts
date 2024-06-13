@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  link='12RJ5G0ulQjNpsPsEYCcxZQHElpj2wu-8/view'
+  // link='12RJ5G0ulQjNpsPsEYCcxZQHElpj2wu-8/view'
+  link='1oiDCWCkBOhZ24P6FCd4V159EFS9Tmi8d/view'
+
 
 }
