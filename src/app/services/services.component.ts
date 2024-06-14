@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -12,6 +13,8 @@ export class ServicesComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.onWindowResize();
+    Aos.init({ disable: false });
+    Aos.refresh();
   }
   getScreenWidth: any;
   @HostListener('window:resize', ['$event'])

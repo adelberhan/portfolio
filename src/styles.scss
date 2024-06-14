@@ -666,7 +666,7 @@ button.mixitup-control-active {
 
 .portfolio-box {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -674,6 +674,8 @@ button.mixitup-control-active {
   background: var(--gradient-white-bg2);
   border-radius: 10px;
   transition: all 0.3s ease;
+
+  align-items: flex-start;
 }
 
 .portfolio-content {

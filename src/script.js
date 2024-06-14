@@ -85,9 +85,18 @@ function hamburgerMenu() {
   });
 
   function hasReached(el) {
-    let topPosition = el.getBoundingClientRect().top;
-    if (window.innerHeight >= topPosition + el.offsetHeight) return true;
-    return false;
+    // let topPosition = el.getBoundingClientRect().top;
+    // if (window.innerHeight >= topPosition + el.offsetHeight) return true;
+    // return false;
+
+    if (!ref.current) return;
+    if (ref.current.getBoundingClientRect().y <= -580 || null) {
+      console.log(ref.current.getBoundingClientRect().y);
+
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
   }
 
   function updateCount(num, maxNum) {
@@ -176,9 +185,9 @@ function hamburgerMenu() {
     origin: "top",
   });
   ScrollReveal().reveal(".about-img,.fillter-buttons,.contact-info", {
-    origin: "left",
+    origin: "top",
   });
-  ScrollReveal().reveal(".about-content,.skills", { origin: "right" });
+  ScrollReveal().reveal(".about-content,.skills", { origin: "top" });
   ScrollReveal().reveal(
     ".allServices,.portfolio-gallery,.blog-box,footer,.img-hero",
     { origin: "bottom" }
@@ -198,27 +207,26 @@ function hamburgerMenu() {
   }
 }
 
+// document.addEventListener("DOMContentLoaded", function() {
+//   const filterButtons = document.querySelectorAll(".filter-buttons .button");
+//   const portfolioBoxes = document.querySelectorAll(".portfolio-box");
 
-document.addEventListener("DOMContentLoaded", function() {
-  const filterButtons = document.querySelectorAll(".filter-buttons .button");
-  const portfolioBoxes = document.querySelectorAll(".portfolio-box");
+//   filterButtons.forEach(button => {
+//     button.addEventListener("click", function() {
+//       const filterValue = this.getAttribute("data-filter");
 
-  filterButtons.forEach(button => {
-    button.addEventListener("click", function() {
-      const filterValue = this.getAttribute("data-filter");
+//       filterButtons.forEach(btn => btn.classList.remove("active"));
+//       this.classList.add("active");
 
-      filterButtons.forEach(btn => btn.classList.remove("active"));
-      this.classList.add("active");
-
-      portfolioBoxes.forEach(box => {
-        if (filterValue === "all") {
-          box.classList.add("mix");
-        } else if (box.classList.contains(filterValue)) {
-          box.classList.add("mix");
-        } else {
-          box.classList.remove("mix");
-        }
-      });
-    });
-  });
-});
+//       portfolioBoxes.forEach(box => {
+//         if (filterValue === "all") {
+//           box.classList.add("mix");
+//         } else if (box.classList.contains(filterValue)) {
+//           box.classList.add("mix");
+//         } else {
+//           box.classList.remove("mix");
+//         }
+//       });
+//     });
+//   });
+// });

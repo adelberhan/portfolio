@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 
 
@@ -7,10 +8,19 @@ import { Component } from '@angular/core';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })
-export class PortfolioComponent  {
+export class PortfolioComponent implements OnInit ,AfterViewInit  {
 
   constructor( ){}
 
+  ngOnInit(): void {
+    Aos.init({ disable: false });
+    Aos.refresh();
+  }
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      Aos.refresh();
+    }, 500);
+  }
 
 
 }
