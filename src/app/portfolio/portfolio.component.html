@@ -10,6 +10,7 @@
       </button>
       <button class="button" data-filter=".front">Front-end</button>
       <button class="button" data-filter=".back">Back-end</button>
+
       <!-- <button class="button" data-filter=".branding">Branding Design</button> -->
     </div>
     <div data-aos="zoom-in-up">
@@ -18,10 +19,7 @@
         appMixitup
       >
         <!-- Dynamically render items -->
-        <div
-          *ngFor="let project of projects"
-          [ngClass]="'mix ' + project.type"
-        >
+        <div *ngFor="let project of projects" [ngClass]="'mix ' + project.type">
           <div
             class="max-w-sm md:max-w-lg mx-auto md:mx-0 border rounded-md p-2 flex flex-col space-y-3 card"
           >
@@ -30,7 +28,7 @@
               [src]="project.image"
               [alt]="project.project_name"
             />
-            <h3 class="text-lg font-semibold" style="height: 56px">
+            <h3 class="text-lg font-semibold" style="height: 20px">
               {{ project.project_name }}
             </h3>
             <p

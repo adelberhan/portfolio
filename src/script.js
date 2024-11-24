@@ -80,24 +80,24 @@ function hamburgerMenu() {
   const sk_counters = document.querySelectorAll(".counter span");
   const progress_bars = document.querySelectorAll(".skills svg circle");
 
-  window.addEventListener("scroll", () => {
-    if (!skillsPlayed) skillsCounter();
-  });
+  // window.addEventListener("scroll", () => {
+  //   if (!skillsPlayed) skillsCounter();
+  // });
 
-  function hasReached(el) {
-    // let topPosition = el.getBoundingClientRect().top;
-    // if (window.innerHeight >= topPosition + el.offsetHeight) return true;
-    // return false;
+  // function hasReached(el) {
+  //   // let topPosition = el.getBoundingClientRect().top;
+  //   // if (window.innerHeight >= topPosition + el.offsetHeight) return true;
+  //   // return false;
 
-    if (!ref.current) return;
-    if (ref.current.getBoundingClientRect().y <= -580 || null) {
-      console.log(ref.current.getBoundingClientRect().y);
+  //   if (!ref.current) return;
+  //   if (ref.current.getBoundingClientRect().y <= -580 || null) {
+  //     console.log(ref.current.getBoundingClientRect().y);
 
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  }
+  //     setSticky(true);
+  //   } else {
+  //     setSticky(false);
+  //   }
+  // }
 
   function updateCount(num, maxNum) {
     let currentNum = +num.innerText;
@@ -112,24 +112,24 @@ function hamburgerMenu() {
 
   let skillsPlayed = false;
 
-  function skillsCounter() {
-    if (!hasReached(first_skill)) return;
-    skillsPlayed = true;
-    sk_counters.forEach((counter, i) => {
-      let target = +counter.dataset.target;
-      let strokeValue = 465 - 465 * (target / 100);
+  // function skillsCounter() {
+  //   if (!hasReached(first_skill)) return;
+  //   skillsPlayed = true;
+  //   sk_counters.forEach((counter, i) => {
+  //     let target = +counter.dataset.target;
+  //     let strokeValue = 465 - 465 * (target / 100);
 
-      progress_bars[i].style.setProperty("--target", strokeValue);
+  //     progress_bars[i].style.setProperty("--target", strokeValue);
 
-      setTimeout(() => {
-        updateCount(counter, target);
-      }, 400);
-    });
+  //     setTimeout(() => {
+  //       updateCount(counter, target);
+  //     }, 400);
+  //   });
 
-    progress_bars.forEach(
-      (p) => (p.style.animation = "progress 2s ease-in-out forwards")
-    );
-  }
+  //   progress_bars.forEach(
+  //     (p) => (p.style.animation = "progress 2s ease-in-out forwards")
+  //   );
+  // }
 
   // side progress bar
 
@@ -193,18 +193,18 @@ function hamburgerMenu() {
     { origin: "bottom" }
   );
 
-  const typed = select(".typed");
-  if (typed) {
-    let typed_strings = typed.getAttribute("data-typed-items");
-    typed_strings = typed_strings.split(",");
-    new Typed(".typed", {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
-    });
-  }
+  // const typed = select(".typed");
+  // if (typed) {
+  //   let typed_strings = typed.getAttribute("data-typed-items");
+  //   typed_strings = typed_strings.split(",");
+  //   new Typed(".typed", {
+  //     strings: typed_strings,
+  //     loop: true,
+  //     typeSpeed: 100,
+  //     backSpeed: 50,
+  //     backDelay: 2000,
+  //   });
+  // }
 }
 
 // document.addEventListener("DOMContentLoaded", function() {
