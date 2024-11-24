@@ -12,7 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxTypedJsModule } from 'ngx-typed-js';
 import { TabViewModule } from 'primeng/tabview';
-
+import { MixitupDirective } from './mixitup.directive';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { TabViewModule } from 'primeng/tabview';
     ContactComponent,
     PortfolioComponent,
     HeaderComponent,
+    MixitupDirective,
   ],
   imports: [
     BrowserModule,
@@ -30,9 +32,9 @@ import { TabViewModule } from 'primeng/tabview';
     CarouselModule,
     NgxTypedJsModule,
     TabViewModule,
-
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MixitupDirective],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -230,3 +230,17 @@ function hamburgerMenu() {
 //     });
 //   });
 // });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialize MixItUp
+    var mixer = mixitup('.portfolio-gallery', {
+      selectors: {
+        target: '.card',
+      },
+      animation: {
+        duration: 300,
+      },
+    });
+  });
+
