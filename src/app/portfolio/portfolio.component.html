@@ -1,46 +1,54 @@
-<section class="portfolio" id="portfolio">
+<section class="portfolio" id="portfolio" *ngIf="projects">
   <div data-aos="fade-down">
     <div class="main-text">
       <h2 class="heading">My Projects</h2>
       <span>Simple of my previous projects</span>
     </div>
     <div class="fillter-buttons">
-      <button class="button mixitup-control-active" data-filter="all">
-        All Work
-      </button>
-      <button class="button" data-filter=".front">Front-end</button>
-      <button class="button" data-filter=".back">Back-end</button>
+      <button class="button" (click)="setFilter('')">All</button>
+      <button class="button" (click)="setFilter('front')">Front-end</button>
+      <button class="button" (click)="setFilter('back')">Back-end</button>
 
       <!-- <button class="button" data-filter=".branding">Branding Design</button> -->
     </div>
     <div data-aos="zoom-in-up">
       <div
         class="portfolio-gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-        appMixitup
+
       >
         <!-- Dynamically render items -->
         <div *ngFor="let project of projects" [ngClass]="'mix ' + project.type">
           <div
-            class="max-w-sm md:max-w-lg mx-auto md:mx-0 border rounded-md p-2 flex flex-col space-y-3 card"
+            *ngIf="
+              !selectedType ||
+              project.type.trim().toLowerCase().includes(selectedType)
+            "
           >
-            <img
-              class="rounded-md h-52 w-full lg:object-cover"
-              [src]="project.image"
-              [alt]="project.project_name"
-            />
-            <h3 class="text-lg font-semibold" style="height: 20px">
-              {{ project.project_name }}
-            </h3>
-            <p
-              class="text-xs text-gray-500"
-              style="height: 32px; word-wrap: break-word"
+            <div
+              class="max-w-sm md:max-w-lg mx-auto md:mx-0 border rounded-md p-2 flex flex-col space-y-3 card"
             >
-              {{ project.description }}
-            </p>
-            <div class="flex items-center space-x-2 mt-4">
-              <a [href]="project.demo_url" target="_blank" class="readMore"
-                >Demo</a
+              <img
+                class="rounded-md h-52 w-full lg:object-cover"
+                [src]="project.image"
+                [alt]="project.project_name"
+              />
+              <h3 class="text-lg font-semibold" style="height: 20px">
+                {{ project.project_name }}
+              </h3>
+              <p
+                class="text-xs text-gray-500"
+                style="height: 32px; word-wrap: break-word"
               >
+                {{ project.description }}
+              </p>
+              <div class="items items-center space-x-2 mt-4">
+                <a [href]="project.demo_url" target="_blank" class="readMore"
+                  >Demo</a
+                >
+                <a [href]="project.github_url" target="_blank" class="readMore"
+                  >GitHub</a
+                >
+              </div>
             </div>
           </div>
         </div>

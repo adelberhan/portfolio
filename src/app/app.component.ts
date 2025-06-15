@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 
-declare function hamburgerMenu(): void;
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,6 @@ declare function hamburgerMenu(): void;
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'portfolio';
   ngOnInit(): void {
-    hamburgerMenu();
     AOS.init({ disable: 'mobile' });
     AOS.refresh();
   }

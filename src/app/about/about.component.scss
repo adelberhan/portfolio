@@ -25,7 +25,8 @@ background-color: #e3edf7;
 background-color: #e3edf7;
 }
 ::ng-deep .p-tabview-nav{
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0;
 }
 ::ng-deep span.ng-star-inserted{
   font-size: 1.2rem;

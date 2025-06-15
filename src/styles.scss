@@ -3,7 +3,9 @@
 @import '../node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss';
 @import '../node_modules/animate.css/animate.min.css';
 @import "../node_modules/primeicons/primeicons.css";
-* {
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Klee+One&family=Lavishly+Yours&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.global-scope {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -17,7 +19,8 @@
       #fff 0%,
       #edf4fa 51%,
       #e5eef7 100%);
-  --gradient-color-bg:linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);;
+  --gradient-color-bg: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  ;
   --main-color: #3d99be;
   --font-color: #90979f;
   --hover-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
@@ -30,8 +33,16 @@ a {
   color: #000;
 }
 
+* {
+  // font-family: "Klee One", cursive;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+
+    font-weight: 700;
+  font-style: normal;
+
+}
+
 body {
-  font-family: "Poppins", sans-serif;
   background: var(--bg-color);
   overflow-x: hidden;
 }
@@ -55,11 +66,11 @@ header .logo {
   font-weight: 700;
 }
 
-span {
-  background: var(--gradient-color-bg);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+// span {
+//   background: var(--gradient-color-bg);
+//   -webkit-background-clip: text;
+//   color: transparent;
+// }
 
 ul.navlist {
   display: flex;
@@ -84,7 +95,7 @@ ul.navlist {
 .right-header {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   grid-gap: 0.8rem;
 }
 
@@ -533,15 +544,21 @@ section {
 
 .readMore {
   background: var(--gradient-white-bg2);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  padding: 7px 9px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding: 7px 24px;
+  /* Adjust padding for full width */
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 500;
   color: #000;
-  margin-right: 0.8rem;
   cursor: pointer;
+  width: 45%;
+  text-align: center;
+  /* Center the text within the full-width button */
+  display: block;
+  /* Make the anchor element a block-level element */
+  margin-right: 0;
+  /* Remove right margin as they are stacked */
 }
 
 .proposal {
@@ -710,9 +727,10 @@ button.mixitup-control-active {
 //   color: var(--font-color);
 //   margin: 0.5rem 0 1rem 0;
 // }
-.card-2{
+.card-2 {
   background: var(--gradient-color-bg);
 }
+
 .max-w-sm {
   max-width: 24rem;
   justify-content: center;
@@ -753,7 +771,7 @@ button.mixitup-control-active {
   flex-direction: column;
 }
 
-.space-y-3 > * + * {
+.space-y-3>*+* {
   margin-top: 0.75rem;
 }
 
@@ -789,7 +807,7 @@ button.mixitup-control-active {
   word-wrap: break-word;
 }
 
-.space-x-2 > * + * {
+.space-x-2>*+* {
   margin-left: 0.5rem;
 }
 
@@ -874,13 +892,13 @@ button.mixitup-control-active {
 
 .card img {
   width: 100%;
-  max-height:208px;
+  max-height: 208px;
   object-fit: cover;
   display: block;
   cursor: pointer;
 }
 
-.card:hover  {
+.card:hover {
   transform: scale(1.1);
 }
 

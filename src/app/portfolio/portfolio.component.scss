@@ -27,3 +27,9 @@ i{
 i:hover{
   color: #3d99be;
 }
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

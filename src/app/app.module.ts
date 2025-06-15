@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,27 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
 import { TabViewModule } from 'primeng/tabview';
 import { MixitupDirective } from './mixitup.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from './evieriment/environment';
+import { AddProjectsComponent } from './add-projects/add-projects.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { ReactiveFormsModule } from '@angular/forms';
+import { path } from 'animejs';
+import { RouterModule } from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
+import { MenubarModule } from 'primeng/menubar';
+
+
+const route = [
+  { path: '', component: MainComponent },
+  { path: 'add', component: AddProjectsComponent },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     PortfolioComponent,
     HeaderComponent,
     MixitupDirective,
+    AddProjectsComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +56,16 @@ import { HttpClientModule } from '@angular/common/http';
     NgxTypedJsModule,
     TabViewModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
+    RouterModule.forRoot(route),
+    ButtonModule,
+    InputTextareaModule,
+    InputTextModule,
+    DropdownModule,
+    MenubarModule
+
   ],
   providers: [MixitupDirective],
   bootstrap: [AppComponent],

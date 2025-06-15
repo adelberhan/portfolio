@@ -40,3 +40,16 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+.cursor\rules\nx-rules.mdc
+.github\instructions\nx.instructions.md
+
+/environment
+/environment*.ts
+
+# ...existing code...
+src/app/environments/environment.ts
+src/app/environments/environment.prod.ts
+# ...existing code...
+
+src/app/add-projects/*

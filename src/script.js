@@ -39,14 +39,14 @@ function hamburgerMenu() {
 
   // portfolio fillter
 
-  var mixer = mixitup(".portfolio-gallery", {
-    selectors: {
-      target: ".portfolio-box",
-    },
-    animation: {
-      duration: 500,
-    },
-  });
+  // var mixer = mixitup(".portfolio-gallery", {
+  //   selectors: {
+  //     target: ".portfolio-box",
+  //   },
+  //   animation: {
+  //     duration: 500,
+  //   },
+  // });
 
   // Initialize swiperjs
 
@@ -188,10 +188,10 @@ function hamburgerMenu() {
     origin: "top",
   });
   ScrollReveal().reveal(".about-content,.skills", { origin: "top" });
-  ScrollReveal().reveal(
-    ".allServices,.portfolio-gallery,.blog-box,footer,.img-hero",
-    { origin: "bottom" }
-  );
+  // ScrollReveal().reveal(
+  //   ".allServices,.portfolio-gallery,.blog-box,footer,.img-hero",
+  //   { origin: "bottom" }
+  // );
 
   // const typed = select(".typed");
   // if (typed) {
@@ -211,36 +211,36 @@ function hamburgerMenu() {
 //   const filterButtons = document.querySelectorAll(".filter-buttons .button");
 //   const portfolioBoxes = document.querySelectorAll(".portfolio-box");
 
-//   filterButtons.forEach(button => {
-//     button.addEventListener("click", function() {
-//       const filterValue = this.getAttribute("data-filter");
+  // filterButtons.forEach(button => {
+  //   button.addEventListener("click", function() {
+  //     const filterValue = this.getAttribute("data-filter");
 
-//       filterButtons.forEach(btn => btn.classList.remove("active"));
-//       this.classList.add("active");
+  //     filterButtons.forEach(btn => btn.classList.remove("active"));
+  //     this.classList.add("active");
 
-//       portfolioBoxes.forEach(box => {
-//         if (filterValue === "all") {
-//           box.classList.add("mix");
-//         } else if (box.classList.contains(filterValue)) {
-//           box.classList.add("mix");
-//         } else {
-//           box.classList.remove("mix");
-//         }
-//       });
-//     });
-//   });
+  //     portfolioBoxes.forEach(box => {
+  //       if (filterValue === "all") {
+  //         box.classList.add("mix");
+  //       } else if (box.classList.contains(filterValue)) {
+  //         box.classList.add("mix");
+  //       } else {
+  //         box.classList.remove("mix");
+  //       }
+  //     });
+  //   });
+  // });
 // });
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Initialize MixItUp
-    var mixer = mixitup('.portfolio-gallery', {
-      selectors: {
-        target: '.card',
-      },
-      animation: {
-        duration: 300,
-      },
-    });
-  });
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   // Initialize MixItUp
+  //   var mixer = mixitup('.portfolio-gallery', {
+  //     selectors: {
+  //       target: '.card',
+  //     },
+  //     animation: {
+  //       duration: 300,
+  //     },
+  //   });
+  // });
 

@@ -1,27 +1,13 @@
 [
-    {
-        "id": 1,
-        "project_name": "E-commerce",
-        "description": "A full web application using the MEAN stack, which stands for MongoDB, Express, Angular, and Node.js",
-        "image": "../../assets/imgs/e-shop.png",
-        "demo_url": "https://my-ng-shop.netlify.app/",
-        "type": "front back"
-    },
-    {
-        "id": 2,
-        "project_name": "E-commerce Admin",
-        "description": "A full web application using the MEAN stack, which stands for MongoDB, Express, Angular, and Node.js",
-        "image": "../../assets/imgs/e-shop-Admin.png",
-        "demo_url": "https://admin-ng.netlify.app/",
-        "type": "front back"
-    },
+
     {
         "id": 3,
         "project_name": "Movies & TV",
         "description": "Movie and TV show app with using TMDB api",
         "image": "../../assets/imgs/movies.png",
         "demo_url": "https://adel-movies.netlify.app/",
-        "type": "front "
+        "type": "front ",
+        "github_url": ""
     },
     {
         "id": 4,
@@ -29,7 +15,8 @@
         "description": "Responsive dashboards built with Angular and PrimeNG offer a powerful combination for creating modern, user-friendly data visualization interfaces.",
         "image": "../../assets/imgs/Dashbord_temp.png",
         "demo_url": "https://adel-dashbord.netlify.app/",
-        "type": "front "
+        "type": "front ",
+        "github_url": ""
     },
     {
         "id": 5,
@@ -37,7 +24,8 @@
         "description": "Movie and TV show app with using TMDB api",
         "image": "../../assets/imgs/AdFlex.png",
         "demo_url": "https://adflex.netlify.app/",
-        "type": "front "
+        "type": "front ",
+        "github_url": ""
     },
     {
         "id": 6,
@@ -45,7 +33,8 @@
         "description": "This application leverages Node.js and Express powered by MongoDB, implementing Google OAuth for secure authentication, and enabling seamless CRUD (Create, Read, Update, Delete) operations for managing stories.",
         "image": "../../assets/imgs/story.png",
         "demo_url": "https://story-c4s8.onrender.com",
-        "type": " back"
+        "type": " back",
+        "github_url": ""
     },
     {
         "id": 7,
@@ -53,6 +42,16 @@
         "description": "TODO application using Angular, where you'll explore essential concepts such as drag-and-drop functionality, CRUD operations in Angular, and the integration of Angular Material components.",
         "image": "../../assets/imgs/todo.png",
         "demo_url": "https://adel-todo.netlify.app/",
-        "type": "front "
+        "type": "front ",
+        "github_url": ""
+    },
+    {
+        "id": 9,
+        "project_name": "Recipe Book",
+        "description": "This is a Flask-based web application that allows users to register, login, and manage their recipe collection. The new feature implemented is a complete user authentication system with session management and localStorage integration for persistent client-side state, along with a robust recipe management system.",
+        "image": "../../assets/imgs/recipe_book_flask.png",
+        "demo_url": "https://adel54.pythonanywhere.com/",
+        "type": "back",
+        "github_url": "https://github.com/adelberhan/recipe_book"
     }
 ]
